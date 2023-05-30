@@ -48,8 +48,6 @@ public class Player : MonoBehaviour
             {
                 anim.SetBool("walk", false);
             }
-
-            
         }
 
     void Jump()
@@ -68,7 +66,6 @@ public class Player : MonoBehaviour
                         {
                              rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
                             doubleJump = false;
-                            
                         }
                     }        
                 }

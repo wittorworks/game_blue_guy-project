@@ -10,7 +10,7 @@ public class Pineapple : MonoBehaviour
 
     public GameObject collected;
 
-    public int score;
+    public int Score;
 
     // Start is called before the first frame update
     void Start()
@@ -23,14 +23,12 @@ public class Pineapple : MonoBehaviour
     {
         if(collider.gameObject.tag == "Player")
         {
+            
             sr.enabled = false;
             circle.enabled = false;
             collected.SetActive(true);
-
-            GameController.instance.totalScore += score;
-
+            GameController.instance.totalScore += Score;
             GameController.instance.UpdateScoreText();
-
             Destroy(gameObject, 0.25f); 
         }
     }
